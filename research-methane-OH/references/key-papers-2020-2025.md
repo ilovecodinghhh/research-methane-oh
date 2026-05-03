@@ -1,275 +1,200 @@
-# Paper: Zhao et al. (2020) — CCMI OH Inter-model Comparison
+# Paper Reference Notes — research-methane-OH
 
-**Full Title:** Inter-model comparison of global hydroxyl radical (OH) distributions and their impact on atmospheric methane over the 2000–2016 period
-
-**Citation:** Zhao, Y., et al., Atmos. Chem. Phys., 20, 9525–9555, 2020.
-
-**DOI:** https://doi.org/10.5194/acp-20-9525-2020
-
-**Method:** CCM (Chemistry-Climate Model Initiative Phase 1 — 12 models)
-
-**Status:** [Complete] — Open Access (Copernicus)
+## Category 1: MCF / Top-Down Studies
 
 ---
 
-## Key Data Extracted
-
-### Global Mean [OH]
-- Range across CCMI models: **0.81–1.51 × 10⁶ molec/cm³**
-- This represents a factor ~2 spread among models
-- Weighting: CH₄-reaction weighted ($[OH]_{CH_4}$) per Lawrence et al. (2001)
-
-### Methane Lifetime (Tropospheric, w.r.t. OH)
-- Range across models: **7.1–13.7 years**
-- Corresponds to the [OH] spread above
-
-### NH/SH Ratio
-- Most models: ~1.2–1.3
-- Some outliers up to 1.4
-
-### Key Drivers of Inter-model Spread
-1. NOx emissions and photochemistry
-2. Photolysis rates (particularly J(O¹D))
-3. Water vapor fields
-4. CO burden differences
-
-### Interannual Variability
-- Multi-model OH IAV: ~2–3% (1σ)
+### Naus et al. (2021) — ACP 21, 4809
+**"Constraints on global OH variability from 3D MCF inversion"**
+- **Method:** Full 3D TM5-4DVAR variational inversion of MCF
+- **Period:** 1994–2017
+- **Key data:**
+  - OH interannual variability: 0.6–0.8% (1σ) — very small
+  - No significant OH trend over study period
+  - NH/SH loss ratio is species-dependent (MCF vs CH₄)
+- **Advance over prior work:** Avoids 2-box model assumptions that biased Rigby (2017) and Turner (2017)
+- **Limitation:** MCF signal decaying → constraint weakening post-2020
+- **PDF:** `mcf-topdown/Naus_2021_ACP_4809.pdf`
 
 ---
 
-## Relevance to Project
-- Establishes the current state of model uncertainty for OH
-- Provides the range envelope for database entries
-- Confirms MCF-based constraint remains essential
-- Period: 2000–2016
+### Naus et al. (2019) — ACP 19, 407
+**"Constraints and biases in a tropospheric two-box model of OH"**
+- **Key finding:** Two-box model approximations introduce ~10% bias in absolute [OH]
+- **Impact:** 1–2% shifts in apparent interannual anomalies
+- **Critical insight:** NH/SH [OH] ratio derived from MCF is not the same ratio relevant for CH₄
+  - MCF has different T-dependent kinetics than CH₄ → "sees" different OH
+  - Interhemispheric exchange rate varies with time (as MCF source/sink balance shifts)
+- **Implication:** Previous large IAV claims (Rigby 2017, Turner 2017) may be biased high
+- **PDF:** `mcf-topdown/Naus_2019_ACP_407.pdf`
 
 ---
 
-# Paper: Zhao et al. (2020) — OH Trend and Methane Budget
-
-**Full Title:** On the role of trend and variability of hydroxyl radical (OH) in the global methane budget
-
-**Citation:** Zhao, Y., et al., Atmos. Chem. Phys., 20, 13011–13022, 2020.
-
-**DOI:** https://doi.org/10.5194/acp-20-13011-2020
-
-**Method:** Box model + CCMI multi-model ensemble
-
-**Status:** [Complete] — Open Access (Copernicus)
+### McNorton et al. (2016) — ACP 16, 7943
+**"Role of OH variability in the stalling of the global atmospheric CH4 growth rate from 1999 to 2006"**
+- **Method:** Box model MCF inversion
+- **Period:** 1998–2014
+- **Key finding:** OH increases may have contributed to CH₄ stagnation period (1999–2006)
+- **PDF:** `mcf-topdown/McNorton_2016_ACP_7943.pdf`
 
 ---
 
-## Key Data Extracted
-
-### OH Trend (1980–2018)
-- **No significant trend detected** in global mean OH
-- Global anomaly: −0.07 ± 0.54 × 10⁵ molec/cm³
-- Consistent with stable OH over this period
-
-### Impact on Methane Budget
-- OH variability contributes ~5 Tg CH₄/yr uncertainty to the budget
-- Reference τ: 9.1 years (used as baseline)
-
-### Key Finding
-- MCF-derived constraints suggest global OH is relatively stable
-- Interannual variability is small (<3%)
-- Both MCF inversions and multi-model results agree on this
+## Category 2: CTM / Bottom-Up Studies
 
 ---
 
-## COVID Flag
-- Analysis period ends 2018 — pre-COVID
-- Does NOT address the 2020 NOx anomaly
+### Acquah et al. (2025) — ACP 25, 13665
+**"Effects of different emission inventories on tropospheric ozone and methane lifetime"**
+- **Model:** EMAC (ECHAM5/MESSy) in QCTM mode
+- **Period:** 2000–2010
+- **OH attribution (CH₄-weighted):**
+  - Anthropogenic non-traffic + transport + shipping + aviation: 36–39%
+  - Lightning NOx: ~25%
+  - Biogenic: ~12%
+  - Stratospheric transport: ~9%
+  - CH₄ decomposition: ~7%
+  - Biomass burning: 5–6%
+- **Key finding:** CEDS has +9.02 Tg(N)/yr NOx vs MACCity → more OH → shorter τ
+- **PDF:** `ctm-bottomup/Acquah_2025_ACP_13665.pdf`
 
 ---
 
-# Paper: Stevenson et al. (2020) — AerChemMIP
-
-**Full Title:** Trends in global tropospheric hydroxyl radical and methane lifetime since 1850 from AerChemMIP
-
-**Citation:** Stevenson, D. S., et al., Atmos. Chem. Phys., 20, 12905–12920, 2020.
-
-**DOI:** https://doi.org/10.5194/acp-20-12905-2020
-
-**Method:** CCM (CMIP6 AerChemMIP multi-model ensemble)
-
-**Status:** [Complete] — Open Access (Copernicus)
-
----
-
-## Key Data Extracted
-
-### Present-day CH₄ Lifetime
-- **τ_atm (whole-atmosphere): 8.4 ± 0.3 years** (multi-model mean)
-- This is notably shorter than IPCC AR6 (9.1 ± 0.9)
-
-### Historical OH Trend
-- OH increased **~8–12%** from 1850 to present
-- Driven by competing effects:
-  - ↑NOx emissions → ↑OH (dominant)
-  - ↑CH₄, ↑CO → ↓OH (partially offsetting)
-
-### NH/SH Ratio
-- ~1.28 (present-day multi-model mean)
-
-### Key Finding
-- Net effect of industrialization has been to increase global OH
-- But rate of increase has slowed in recent decades as NOx stabilizes
-- Referenced in Acquah et al. (2025) and IPCC AR6
+### Mertens et al. (2024) — ACP 24, 12079
+**"Impact of transport sector emissions on future ozone, methane, and OH"**
+- **Model:** EMAC
+- **Key data:**
+  - Present-day (2015) τ_trop: 7.63 years
+  - SSP1-2.6 (2050): τ_trop = 8.50 years
+  - SSP3-7.0 (2050): τ_trop = 8.39 years
+- **Key finding:** Clean air policies reducing NOx → less OH → longer τ_CH₄
+- **Implication:** Methane mitigation becomes harder as NOx declines
+- **PDF:** `ctm-bottomup/Mertens_2024_ACP_12079.pdf`
 
 ---
 
-# Paper: Saunois et al. (2020) — Global Methane Budget
-
-**Full Title:** The Global Methane Budget 2000–2017
-
-**Citation:** Saunois, M., et al., Earth Syst. Sci. Data, 12, 1561–1623, 2020.
-
-**DOI:** https://doi.org/10.5194/essd-12-1561-2020
-
-**Method:** Synthesis (multi-approach: top-down inversions, bottom-up inventories, process models)
-
-**Status:** [Complete] — Open Access (Copernicus)
-
----
-
-## Key Data Extracted
-
-### OH Sink of CH₄
-- **553 ± 56 Tg CH₄/yr** (dominant sink, ~90% of total chemical sink)
-
-### Methane Lifetimes
-- **Tropospheric lifetime w.r.t. OH: 11.2 ± 1.3 years**
-- **Total atmospheric lifetime: 9.1 ± 0.9 years**
-- Additional sinks: stratospheric loss, soil uptake, Cl reaction
-
-### Period
-- Decade average: 2008–2017
-
-### Key Finding
-- This is THE reference document for the global methane budget
-- OH-related lifetime values are derived from MCF constraints
-- Serves as anchor point for all other studies
+### Anderson et al. (2021) — ACP 21, 6481
+**"Spatial and temporal variability in tropospheric OH"**
+- **Model:** MERRA-2 GMI (specified dynamics)
+- **Period:** 1980–2018
+- **Key data:**
+  - ENSO explains ~30% of global OH variability in boreal winter
+  - El Niño: 10–15% reduction in tropical Pacific column OH
+  - 1997–1998 El Niño: ~9% global OH decrease
+  - ATom validation: ~20% high bias (within 35% measurement uncertainty)
+- **PDF:** `ctm-bottomup/Anderson_2021_ACP_6481.pdf`
 
 ---
 
-# Paper: Nicely et al. (2020) — ML Analysis of OH
-
-**Full Title:** A machine learning examination of hydroxyl radical differences among model simulations for CCMI
-
-**Citation:** Nicely, J. M., et al., Atmos. Chem. Phys., 20, 1341–1361, 2020.
-
-**DOI:** https://doi.org/10.5194/acp-20-1341-2020
-
-**Method:** Machine Learning (Random Forest) applied to CCMI model output
-
-**Status:** [Complete] — Open Access (Copernicus)
+### Stevenson et al. (2020) — ACP 20, 12905
+**"Trends in global tropospheric hydroxyl radical and methane lifetime since 1850 from AerChemMIP"**
+- **Key data:**
+  - τ_atm present-day: 8.4 ± 0.3 yr (multi-model; notably shorter than MCF-based)
+  - OH increased ~8–12% from 1850 to present
+  - NH/SH ratio: ~1.28
+- **PDF:** `ctm-bottomup/Stevenson_2020_ACP_12905.pdf`
 
 ---
 
-## Key Data Extracted
-
-### Inter-model OH Spread
-- Methane lifetime spread across CCMI models: **45%–80%**
-- Primary drivers of spread (ranked by importance):
-  1. NOx (dominant)
-  2. Tropospheric O₃ column
-  3. Water vapor
-  4. Photolysis rates
-
-### Key Finding
-- ML approach identifies NOx as single most important predictor of inter-model OH differences
-- Suggests that emission inventory choice is critical for OH accuracy
-- Models with higher NOx → higher OH → shorter τ_CH4
-- This links directly to Acquah et al. (2025) findings about CEDS vs MACCity
+### Zhao et al. (2020a) — ACP 20, 9525
+**"Inter-model comparison of global OH distributions and impact on CH₄ over 2000–2016"**
+- **Models:** 12 CCMI Phase 1
+- **Key data:** [OH] range 0.81–1.51 × 10⁶; τ_trop range 7.1–13.7 yr
+- **PDF:** `ctm-bottomup/Zhao_2020_ACP_9525.pdf`
 
 ---
 
-# Paper: Anderson et al. (2021) — OH and Climate Variability
-
-**Full Title:** Spatial and temporal variability in the hydroxyl (OH) radical: understanding the role of large-scale climate features and their influence on OH through its dynamical and photochemical drivers
-
-**Citation:** Anderson, D. C., et al., Atmos. Chem. Phys., 21, 6481–6508, 2021.
-
-**DOI:** https://doi.org/10.5194/acp-21-6481-2021
-
-**Method:** CTM (MERRA-2 GMI) + CCMI models + ATom observations
-
-**Status:** [Complete] — Open Access (Copernicus)
+### Zhao et al. (2020b) — ACP 20, 13011
+**"On the role of trend and variability of OH in the global CH₄ budget"**
+- **Key data:** No significant OH trend 1980–2018; OH variability contributes ~5 Tg/yr to budget uncertainty
+- **PDF:** `ctm-bottomup/Zhao_2020_ACP_13011.pdf`
 
 ---
 
-## Key Data Extracted
-
-### ENSO-OH Relationship
-- ENSO is the **dominant mode** of global OH variability
-- Explains ~30% of total OH variance in boreal winter
-- El Niño → **10–15% reduction** in tropospheric column OH over tropical Pacific/Australia
-
-### 1997–1998 ENSO Event
-- **9% global OH decrease** (from Rowlinson et al., 2019)
-- Up to 20% over Indian Ocean (from Duncan et al., 2003)
-
-### Model Validation (ATom)
-- MERRA-2 GMI has ~20% high bias vs in-situ ATom OH observations
-- NH normalized mean bias: 19%
-- SH normalized mean bias: 16%
-- Both within measurement uncertainty (35% for ATom OH)
-
-### OH Variability Mechanisms
-- Upper troposphere: NOx (lightning) changes dominate
-- Lower troposphere: Water vapor + O(¹D) changes dominate
-- Biomass burning CO: Major regional OH sink during El Niño
+### Zhao et al. (2019) — ACP 19, 13701
+**"Inter-model OH comparison and impact on CH₄ (CCMI Phase 1)"**
+- **Key data:** Multi-model mean [OH] = 1.11 ± 0.17 × 10⁶; τ = 9.3 ± 1.7 yr
+- **PDF:** `ctm-bottomup/Zhao_2019_ACP_13701.pdf`
 
 ---
 
-# Paper: Acquah et al. (2025) — Emission Inventory Effects
-
-**Full Title:** Effects of different emission inventories on tropospheric ozone and methane lifetime
-
-**Citation:** Acquah, C., Stecher, L., Mertens, M., and Jöckel, P., Atmos. Chem. Phys., 25, 13665–13686, 2025.
-
-**DOI:** https://doi.org/10.5194/acp-25-13665-2025
-
-**Method:** CCM (EMAC in QCTM mode) — CCMI-1 vs CCMI-2022 emissions
-
-**Status:** [Complete] — Open Access (Copernicus)
+### Rowlinson et al. (2019) — ACP 19, 8669
+**"Impact of El Niño–Southern Oscillation on tropospheric ozone, methane, and OH"**
+- **Model:** p-TOMCAT CTM
+- **Period:** 1997–2016
+- **Key finding:** ENSO drives strong regional OH changes; 1997–1998 fires → massive OH suppression
+- **PDF:** `ctm-bottomup/Rowlinson_2019_ACP_8669.pdf`
 
 ---
 
-## Key Data Extracted
+### Wild et al. (2020) — ACP 20, 4047
+**"Global sensitivity analysis of chemistry-climate models"**
+- **PDF:** `ctm-bottomup/Wild_2020_ACP_4047.pdf`
+- **Status:** PDF downloaded; quantitative OH data not yet extracted
 
-### Emission Inventory Effect on CH₄ Lifetime
-- CEDS (CCMI-2022) produces **shorter CH₄ lifetime** than MACCity (CCMI-1)
-- Mechanism: CEDS has higher global anthropogenic NOx (+9.02 Tg(N)/yr average 2000–2010)
-- More NOx → more OH → shorter τ_CH4
+---
 
-### OH Attribution (CH₄-weighted, Lawrence et al. 2001)
-- **Anthropogenic non-traffic + land transport + shipping + aviation:** 36% (EMIS-01) to 39% (EMIS-02) of global tropospheric [OH]_{CH4}
-- **Lightning NOx:** ~25%
-- **Biogenic emissions:** ~12%
-- **Stratospheric transport:** ~9%
-- **CH₄ decomposition:** ~7%
-- **N₂O:** ~4%
-- **Biomass burning:** 5–6%
+### Voulgarakis et al. (2013) — ACP 13, 4839
+**"Analysis of present-day and future OH and methane lifetime in the ACCMIP"**
+- **Models:** 14 ACCMIP models
+- **Key data:** Multi-model mean [OH] = 1.13 ± 0.09 × 10⁶; τ_trop = 9.8 ± 1.6 yr
+- **PDF:** `ctm-bottomup/Voulgarakis_2013_ACP_4839.pdf`
 
-### Category-specific OH changes (EMIS-02 vs EMIS-01)
-- Anthropogenic non-traffic: **+0.03 × 10⁶ molec/cm³**
-- Shipping: **+0.02 × 10⁶ molec/cm³**
-- Biomass burning: **+0.02 × 10⁶ molec/cm³**
-- Land transport: **+0.01 × 10⁶ molec/cm³**
-- Aviation: **−0.01 × 10⁶ molec/cm³**
-- Biogenic: **−0.01 × 10⁶ molec/cm³**
+---
 
-### Reference Values Cited in Paper
-- Prinn et al. (2005): τ = 10.2 $^{+0.9}_{-0.7}$ years (MCF-based)
-- Prather et al. (2012): τ = 9.1 ± 0.9 years
-- Stevenson et al. (2020) AerChemMIP: τ = 8.4 ± 0.3 years
-- IPCC AR5 (Myhre et al., 2013): τ = 9.25 ± 0.6 years
-- IPCC AR6 (Szopa et al., 2021): τ = 9.1 ± 0.9 years
+### Additional downloaded CTM/CCM papers (data extraction pending):
+- Naik et al. (2013) — `ctm-bottomup/Naik_2013_ACP_5277.pdf`
+- Holmes et al. (2013) — `ctm-bottomup/Holmes_2013_ACP_285.pdf`
+- Lelieveld et al. (2016) — `ctm-bottomup/Lelieveld_2016_ACP_12477.pdf`
+- Murray et al. (2014) — `ctm-bottomup/Murray_2014_ACP_3589.pdf`
 
-### Tagging Methodology
-- First application of tagging approach to attribute CH₄ lifetime to emission sectors
-- Uses EMAC/MECCA chemistry with combinatorial tagged tracers
-- Tropopause: climatological 300–215·cos²(φ) hPa (Lawrence et al., 2001)
+---
+
+## Category 3: Satellite / ML
+
+---
+
+### Duncan et al. (2024) — ACP 24, 13001
+**"Novel observational constraints on tropospheric OH"**
+- **Type:** Perspective/opinion paper
+- **Key argument:** MCF constraint is degrading; need integrated satellite observing system
+- **Proposes:** Combining HCHO + CO + O₃ satellite columns for OH inference
+- **No quantitative global OH value** — framework paper
+- **PDF:** `satellite-ml/Duncan_2024_ACP_13001.pdf`
+
+---
+
+### Nicely et al. (2020) — ACP 20, 1341
+**"ML examination of hydroxyl radical differences among CCMI models"**
+- **Method:** Random Forest ML on CCMI model outputs
+- **Key finding:** NOx is #1 predictor; O₃, H₂O, photolysis follow
+- **PDF:** `satellite-ml/Nicely_2020_ACP_1341.pdf`
+
+---
+
+## Category 4: Synthesis
+
+---
+
+### Saunois et al. (2025) — ESSD 17, 1873
+**"The Global Methane Budget 2000–2020"**
+- **Key data:**
+  - OH + Cl sink: 595 Tg/yr [510–663] (2010–2019)
+  - Total chemical: 623 Tg/yr
+  - τ_trop: 11.2 yr; τ_atm: 9.3 yr
+  - Soil: 30 Tg/yr [15–45]
+- **Period:** Extends to 2020 (first synthesis including COVID year)
+- **PDF:** `synthesis/Saunois_2025_ESSD_1873.pdf`
+
+---
+
+### Saunois et al. (2020) — ESSD 12, 1561
+**"The Global Methane Budget 2000–2017"**
+- **Key data:** OH sink = 553 ± 56 Tg/yr; τ_trop = 11.2 ± 1.3; τ_atm = 9.1 ± 0.9
+- **PDF:** `synthesis/Saunois_2020_ESSD_1561.pdf`
+
+---
+
+### Saunois et al. (2017) — ACP 17, 11135  
+**"Variability and quasi-decadal changes in the methane budget"**
+- **PDF:** `synthesis/Saunois_2017_ACP_11135.pdf`
+- **Status:** PDF downloaded; data extraction pending
