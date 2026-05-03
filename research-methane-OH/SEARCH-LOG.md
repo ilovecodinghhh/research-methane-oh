@@ -51,77 +51,71 @@ From Acquah (2025) references:
 - Mertens et al. (2024) — τ_trop(2015) = 7.63; τ_trop(2050) = 8.39–8.50
 - Rowlinson et al. (2019) — ENSO/biomass burning OH impact
 
-#### PDF Downloads (22 total)
+#### PDF Downloads (22 automated)
 - **Successful OA downloads:** 22 papers from Copernicus (ACP, ESSD)
 - **Failed (Wiley Cloudflare block):** Nicely 2018 JGR, Nguyen 2020 GRL, He 2021 GRL
 - **False positives (removed):** Droste et al. (PFCs); Patra 2021 (wrong URL)
 
 ---
 
-## Coverage Assessment
+## Session 3 — 2026-05-03 (15:00–17:00 UTC)
+
+### Manual additions by user
+User manually downloaded and added 5 previously-paywalled papers + 2 others:
+
+**Correct papers obtained (5):**
+| Paper | Journal | Data Extracted |
+|-------|---------|---------------|
+| Turner, A.J. et al. (2017) | PNAS | ✅ τ=9.2±0.2, 7% OH decrease (most likely), underdetermined |
+| He, J. et al. (2021) | GRL | ✅ 2% global OH spread, 11.2 Tg/yr emission difference |
+| Nicely, J.M. et al. (2018) | JGR Atmos | ✅ +0.95±0.18 %/dec OH trend, 94% offset |
+| Nguyen, N.H. et al. (2020) | GRL | ✅ 25% emission bias from neglected feedbacks |
+| Montzka, S.A. et al. (2011) | Science | ✅ OH IAV = 2.3±1.5% (1998–2007) |
+
+**Misidentified papers (2):**
+| File | Expected | Actual Content |
+|------|----------|---------------|
+| `Rigby, M. et al.2017.pdf` | Rigby (2017) PNAS — MCF 3-box | **McNorton (2016) duplicate** — identical 2,786,450 bytes |
+| `Prather, M.J. & Zhu, X.2024.pdf` | Prather OH/CH₄ paper | **Prather & Zhu (2024) Elementa** — tropospheric ozone lifetimes |
+
+### User also reorganized directory structure
+- Flattened `papers/` — removed subdirectories (ctm-bottomup/, mcf-topdown/, satellite-ml/, synthesis/)
+- All 27 PDFs now in single `papers/` directory
+
+---
+
+## Coverage Assessment (Updated)
 
 ### By Period
 | Period | Papers Found | Status |
 |--------|-------------|--------|
-| 2010–2014 | 4 (Naik, Voulgarakis, Holmes, Murray) | Downloaded; data extraction pending |
+| 2010–2014 | 4 (Montzka 2011, Naik, Voulgarakis, Holmes, Murray) | **Montzka extracted**; others pending |
 | 2015–2016 | 2 (McNorton, Lelieveld) | Downloaded |
-| 2017–2018 | 0 OA papers with global OH data | Gap (Rigby & Turner are paywalled PNAS) |
-| 2019 | 3 (Zhao, Naus, Rowlinson) | Complete extraction |
-| 2020 | 7 (Zhao ×2, Stevenson, Nicely, Saunois, Wild, Anderson [pub 2021]) | Complete |
-| 2021 | 2 (Naus, Anderson) | Complete extraction |
-| 2022–2023 | 0 OA papers found with quantitative global OH | Gap |
+| 2017–2018 | 2 (Turner 2017, Nicely 2018) | ✅ **Both extracted** (was gap) |
+| 2019 | 3 (Zhao, Naus, Rowlinson) | Complete |
+| 2020 | 8 (Zhao ×2, Stevenson, Nicely ML, Saunois, Wild, Nguyen, Anderson [pub 2021]) | ✅ **Nguyen added** |
+| 2021 | 3 (Naus, Anderson, He) | ✅ **He added** |
+| 2022–2023 | 0 | Gap remains |
 | 2024 | 2 (Duncan, Mertens) | Complete |
 | 2025 | 2 (Acquah, Saunois) | Complete |
 
 ### By Method
 | Method | Papers | Data Quality |
 |--------|--------|-------------|
-| MCF / Top-down | 3 downloaded + 3 paywalled | Good — Naus (2021) is definitive |
-| CTM / CCM | 14 downloaded | Excellent — multi-model ensembles |
-| Satellite / ML | 2 downloaded | Emerging — no quantitative global estimate yet |
-| Synthesis | 3 downloaded | Excellent — Saunois 2025 is current reference |
+| MCF / Top-down | 5 (Montzka, Naus ×2, Turner, McNorton) + 1 still missing (Rigby) | **Excellent** — seminal + definitive papers |
+| CTM / CCM | 16 (incl. He, Nicely 2018) | **Excellent** |
+| Feedbacks | 1 (Nguyen) | Good — key methodological paper |
+| Satellite / ML | 2 | Emerging |
+| Synthesis | 3 | **Excellent** — Saunois 2025 is current |
 
-### Remaining Gaps
-1. **2022–2023:** No OA papers found with fresh global OH/τ quantitative data
-2. **COVID-19 OH impact:** No OA paper found quantifying 2020 global OH anomaly
-3. **Paywalled papers:** 6 critical papers need manual access (see below)
-4. **Data extraction pending:** 6 papers downloaded but not yet extracted (older CTM studies)
+### Papers Still Not Obtained
+| # | Paper | Priority | Notes |
+|---|-------|----------|-------|
+| 1 | Rigby, M. et al. (2017) PNAS | **High** | File provided is McNorton duplicate |
+| 2 | Prather (2024) OH/CH₄ study | **Medium** | Identity uncertain; file provided is ozone paper |
 
----
-
-## Papers Not Downloaded — Requires Manual Intervention
-
-### Paywalled (no OA version found)
-
-| # | Author(s) | Year | Title | Journal | DOI | Reason | Priority |
-|---|-----------|------|-------|---------|-----|--------|----------|
-| 1 | Rigby, M. et al. | 2017 | Role of OH variability in the stalling of the global atmospheric CH₄ growth rate from 1999 to 2006 | PNAS | `10.1073/pnas.1616426114` | PNAS paywall | **High** — foundational MCF study; large OH IAV claim |
-| 2 | Turner, A.J. et al. | 2017 | Ambiguity in the causes for decadal trends in atmospheric methane | PNAS | `10.1073/pnas.1616020114` | PNAS paywall | **High** — counter-argument to Rigby; independent OH IAV estimate |
-| 3 | Montzka, S.A. et al. | 2011 | Small interannual variability of global atmospheric hydroxyl | Science | `10.1126/science.1197817` | Science paywall | **High** — seminal MCF constraint paper; "small IAV" conclusion |
-| 4 | Prather, M.J. & Zhu, X. | 2024 | [OH and methane lifetime changes] | Science | — (DOI not confirmed) | Science paywall | **High** — most recent high-impact OH study |
-| 5 | Nicely, J.M. et al. | 2018 | Changes in the tropical photochemical environment from 2003 to 2013 | JGR Atmospheres | `10.1029/2018JD028388` | Wiley paywall | **Medium** — quantitative global OH changes from satellite-constrained CTM |
-| 6 | He, J. et al. | 2021 | Methane short-lived climate forcer role: OH response to meteorological forcing | GRL | `10.1029/2021GL094140` | Wiley paywall | **Medium** — OH response to met variability; potential COVID insights |
-
-### Download Blocked (Cloudflare / bot protection)
-
-| # | Author(s) | Year | Title | Journal | DOI | Blocker | Notes |
-|---|-----------|------|-------|---------|-----|---------|-------|
-| 7 | Nicely, J.M. et al. | 2018 | (same as #5 above) | JGR Atmospheres | `10.1029/2018JD028388` | Wiley Cloudflare | Returned 5.5K HTML instead of PDF |
-| 8 | Nguyen, N.H. et al. | 2020 | Chemical feedbacks on the future CH₄ lifetime | GRL | `10.1029/2019GL085706` | Wiley Cloudflare | Returned HTML block page |
-| 9 | He, J. et al. | 2021 | (same as #6 above) | GRL | `10.1029/2021GL094140` | Wiley Cloudflare | Returned HTML block page |
-
-**Note:** Items 7–9 overlap with the paywalled list. Wiley/AGU journals (JGR, GRL) block automated downloads via Cloudflare even for OA articles. Manual browser download may succeed if the paper is actually OA.
-
-### False Positives (wrong paper at URL)
-
-| # | Attempted Target | Actual Paper Found | URL Tried | Action Taken |
-|---|-----------------|-------------------|-----------|-------------|
-| 10 | Patra et al. (2021) TransCom MCF | HTML error page (79K) | `acp.copernicus.org/articles/21/6024/2021/` | Deleted |
-| 11 | Naus et al. (2020) "OH variability" | Droste et al. (2020) — PFC trends | `acp.copernicus.org/articles/20/4787/2020/` | Deleted |
-
-### Summary
-- **Total papers identified:** 28
-- **Successfully downloaded:** 22 (all Copernicus OA journals)
-- **Not downloadable:** 6 (paywall/Cloudflare)
-- **Download success rate:** 79%
-- **Blocker pattern:** All failed downloads are Wiley (AGU) or AAAS (Science/PNAS) journals
+### Final Statistics
+- **Total unique papers obtained:** 26
+- **Data extracted:** 20 of 26
+- **Data extraction pending:** 6 (older CTM studies: Wild, Lelieveld, Murray, Naik, Holmes, Saunois 2017)
+- **Misidentified files:** 2 (Rigby duplicate, Prather wrong paper)
