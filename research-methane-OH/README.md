@@ -4,11 +4,12 @@
 Systematic review of literature (2011–2025) on global tropospheric Hydroxyl Radical ($OH$) abundance and Methane Lifetime ($\tau_{CH_4}$) to construct a reliable global time series database.
 
 ## Current Status
-- **26 unique papers obtained** (27 PDFs; 1 duplicate)
-- **20 papers with quantitative data extracted**
-- **6 older papers** pending detailed extraction
+- **33 unique papers downloaded** (33 PDFs in `papers/`)
+- **26 papers with quantitative data extracted**
+- **7 older papers** pending detailed extraction
+- **11 paywalled papers** identified but not obtained (see DATABASE.md)
 - **2 misidentified files** (see DATABASE.md)
-- **1 paper still not obtained** (Rigby 2017 PNAS)
+- Coverage: **2001–2025** (2022–2023 gap filled in Session 4)
 
 ## Methodological Framework
 
@@ -22,11 +23,12 @@ Systematic review of literature (2011–2025) on global tropospheric Hydroxyl Ra
 ### Key Findings (Consolidated)
 | Metric | Best Estimate | Source(s) |
 |--------|--------------|-----------|
-| Global mean [OH] | 1.11 ± 0.17 × 10⁶ molec/cm³ | Zhao et al. (2019) |
+| Global mean [OH] | 1.11 ± 0.17 × 10⁶ (models); ~0.9 × 10⁶ (obs-constrained) | Zhao et al. (2019, 2023) |
 | OH interannual variability | 2.3 ± 1.5% (MCF obs); <1% (3D) | Montzka (2011); Naus (2021) |
 | τ_CH₄ total atmospheric | 9.1–9.3 ± 0.9 yr | IPCC AR6; Saunois (2025) |
 | OH trend (1980–2018) | No significant trend | Naus (2021); Nicely (2018) |
-| OH chemical sink | 595 Tg CH₄/yr [510–663] | Saunois et al. (2025) |
+| OH chemical sink | 471–508 Tg/yr (constrained); 595 (raw models) | Zhao (2023); Saunois (2025) |
+| Model OH bias | ~20% overestimate | Zhao et al. (2023) |
 
 ### Search Strategy
 - **Primary sources:** Copernicus OA journals (ACP, ESSD, GMD), AGU journals (JGR, GRL), Science, PNAS
@@ -60,20 +62,29 @@ research-methane-OH/
 - Naus, S. (TM5 — definitive 3D MCF inversion)
 - Turner, A.J. (Harvard — underdetermined problem)
 - Nicely, J.M. (NASA — empirical OH trends & ML analysis)
-- Zhao, Y. (CCMI — multi-model OH intercomparisons)
+- Zhao, Y. (CCMI — multi-model OH intercomparisons; reconciliation)
 - Stevenson, D.S. (AerChemMIP — historical OH trends)
 - Saunois, M. (Global Methane Budget series)
 - He, J. (GFDL — meteorological forcing on OH)
 - Nguyen, N.H. (Caltech — chemical feedback analysis)
+- Souri, A.H. (NASA — satellite TOH trends)
+- Anderson, D.C. (NASA — satellite TCOH; ENSO/OH)
+- Bousquet, P. (LSCE — early MCF inversion)
+- Prinn, R. (MIT/AGAGE — foundational MCF measurements)
+- Patra, K. (JAMSTEC — NH/SH parity; multi-model MCF)
+- Lawrence, M.G. (MPI — weighting methodology)
+- John, J.G. (GFDL — climate vs emission drivers)
 
 ## Critical Flags
-- ⚠️ **2020–2025 gap:** No observation-constrained global OH data post-2019
-- ⚠️ **MCF decay:** Signal-to-noise degrading; future OH estimation needs new methods
+- ⚠️ **Model bias:** CTMs overestimate global OH by ~20% vs observation-constrained (Zhao 2023)
+- ⚠️ **2020–2025 sparse:** No observation-constrained global OH data post-2019
+- ⚠️ **MCF decay:** Signal-to-noise degrading; future OH estimation needs satellites
 - ⚠️ **COVID-19:** 2020 NOx anomaly impact on OH not yet quantified
 - ⚠️ **Feedback bias:** Static OH inversions underestimate by ~25% over decade (Nguyen 2020)
 - ⚠️ **Underdetermined:** Surface observations alone cannot separate emissions from OH trends (Turner 2017)
+- ⚠️ **NH/SH ratio:** Contested — models say 1.2–1.3, Patra (2014) says ~1.0
 
 ---
 *Project created: 2026-05-03*
-*Last updated: 2026-05-03 (Phase 3 — manual additions integrated)*
+*Last updated: 2026-05-03 (Phase 4 — deeper search 2002–2026; 2022–2023 gap filled)*
 *No-Hallucination Policy: All numerical values sourced directly from literature.*

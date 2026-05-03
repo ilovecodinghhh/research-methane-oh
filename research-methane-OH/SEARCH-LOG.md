@@ -114,8 +114,79 @@ User manually downloaded and added 5 previously-paywalled papers + 2 others:
 | 1 | Rigby, M. et al. (2017) PNAS | **High** | File provided is McNorton duplicate |
 | 2 | Prather (2024) OH/CH₄ study | **Medium** | Identity uncertain; file provided is ozone paper |
 
-### Final Statistics
+### Final Statistics (Session 3)
 - **Total unique papers obtained:** 26
 - **Data extracted:** 20 of 26
 - **Data extraction pending:** 6 (older CTM studies: Wild, Lelieveld, Murray, Naik, Holmes, Saunois 2017)
 - **Misidentified files:** 2 (Rigby duplicate, Prather wrong paper)
+
+---
+
+## Search Session 4 — 2026-05-03 (15:30–17:25 UTC)
+
+### Objective: Deeper search across full 2002–2026 range
+
+### APIs Used
+1. **CrossRef API** — 12 queries (with 3–5s rate limiting between calls)
+2. **Brave Web Search** — 2 queries
+3. **Browser (Copernicus)** — 3 pages extracted (Zhao 2023, Souri 2024)
+4. **pdftotext** — 6 papers text-extracted
+
+### New Papers Found & Downloaded (6 OA)
+
+| Paper | Method | Key Finding | DOI |
+|-------|--------|-------------|-----|
+| **Zhao et al. (2023) ACP** | Obs-constrained OH | Models overestimate OH by ~20%; constrained loss = 471–508 Tg/yr | 10.5194/acp-23-789-2023 |
+| **Anderson et al. (2023) ACP** | ML + satellite TCOH | First feasibility for satellite-derived column OH | 10.5194/acp-23-6319-2023 |
+| **Souri et al. (2024) ACP** | GEOS + OMI fusion | 1°×1° TOH trends 2005–2019; 65% variance from 5 drivers | 10.5194/acp-24-8677-2024 |
+| **Bousquet et al. (2005) ACP** | MCF inversion | IAV = 8.5±1.0% unconstrained; 65% less with emission flexibility | 10.5194/acp-5-2635-2005 |
+| **John et al. (2012) ACP** | GFDL CM3 | Climate vs emission drivers τ; +5% PI→present; −9 to +4% RCPs | 10.5194/acp-12-12021-2012 |
+| **Lawrence et al. (2001) ACP** | Theory | Defines AM vs CH₄-weighted [OH]; foundational methodology | 10.5194/acp-1-37-2001 |
+
+### New Papers Identified (Paywalled — 8)
+
+| Paper | Journal | DOI | Priority |
+|-------|---------|-----|----------|
+| Prather & Zhu (2024) | Science | 10.1126/science.adn0415 | **High** — resetting OH/τ with UV |
+| Patra et al. (2014) | Nature | 10.1038/nature13721 | **High** — NH/SH OH parity |
+| Patra et al. (2021) | JGR Atmos | 10.1029/2020JD033862 | **High** — MCF still constrains OH |
+| Prinn et al. (2001) | Science | 10.1126/science.1058673 | **Medium** — foundational MCF |
+| Prinn et al. (2005) | GRL | 10.1029/2004GL022228 | **Medium** — updated MCF |
+| Prather et al. (2012) | GRL | 10.1029/2012GL051440 | **Medium** — τ reassessment |
+| Turner et al. (2018) | PNAS | 10.1073/pnas.1807532115 | **Medium** — ENSO/OH |
+| Fiore et al. (2024) | Ann Rev Earth Planet Sci | 10.1146/annurev-earth-032320-090307 | **Medium** — comprehensive review |
+
+### Key Gap Resolution: 2022–2023
+**The 2022–2023 gap is now filled!**
+- Zhao et al. (2023) — Critical reconciliation showing models overestimate OH by ~20%
+- Anderson et al. (2023) — First satellite OH constraint feasibility study
+
+### Pre-2011 Papers Added
+
+| Period | Papers Added | Significance |
+|--------|-------------|-------------|
+| 2001 | Lawrence et al. (ACP) | Methodological foundation (AM vs CH₄-weighted) |
+| 2005 | Bousquet et al. (ACP) | Early MCF inversion with emission uncertainty analysis |
+| 2012 | John et al. (ACP) | Climate vs emissions drivers over 1860–2100 |
+
+### Updated Coverage
+| Period | Papers in DB | Status |
+|--------|-------------|--------|
+| 2000–2005 | 3 (Lawrence, Bousquet, Spivakovsky[pw]) | Good |
+| 2005–2010 | 0 new OA | Gap (Prinn 2005, Krol 2003 are paywalled) |
+| 2011–2012 | 3 (Montzka, Prather[pw], John) | **Montzka + John extracted** |
+| 2013–2016 | 6 (Voulgarakis, Naik, Holmes, Murray, Patra[pw], McNorton, Lelieveld) | Good |
+| 2017–2018 | 4 (Turner, Rigby[pw], Nicely 2018, Turner 2018[pw]) | Good |
+| 2019 | 3 (Zhao, Naus, Rowlinson) | Complete |
+| 2020–2021 | 9 | **Excellent** |
+| 2022–2023 | 2 (Zhao 2023, Anderson 2023) | **Gap now filled** ✅ |
+| 2024 | 4 (Duncan, Mertens, Souri, Prather[pw]) | **Excellent** |
+| 2025 | 2 (Acquah, Saunois) | Complete |
+
+### Updated Final Statistics
+- **Total unique papers in database:** 44
+- **Downloaded (OA):** 33 PDFs
+- **Paywalled/not obtained:** 11
+- **Data extracted:** 26 papers
+- **Data extraction still pending:** 7 (older CTM studies + Saunois 2017)
+- **Acquisition success rate:** 33/44 = 75%

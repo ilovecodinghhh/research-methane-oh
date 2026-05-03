@@ -126,22 +126,57 @@ OH recycling in pristine tropical forests (isoprene-rich environments):
 ## Temporal Coverage Summary
 
 ```
-1850 ████████████████████████████████████████████████ 2025
+1850 ████████████████████████████████████████████████ 2026
      |--- Stevenson (AerChemMIP) historical trend ---|
+              |-------- John (CM3): 1860-2100 --------|
                     |-------- Zhao CCMI: 1980-2015 --------|
                     |-------- Nicely empirical: 1980-2015 ---------|
                     |-------- Zhao budget: 1980-2018 --------|
                     |-------- He met forcing: 1980-2017 --------|
+                    |- Bousquet MCF: 1980-2000 -|
                          |---- Anderson ENSO: 1980-2018 ----|
                          |---- Turner 2-box: 1983-2015 ---|
                               |- Montzka: 1998-2007 -|
                               |--- Naus 3D: 1994-2017 ---|
                               |-- Saunois GMB: 2000-2020 --|
                               |-- Acquah: 2000-2010 --|
-                                                     | GAP: 2020-2025 |
+                              |-- Zhao reconcil: 2000-2009 --|
+                                   |- Souri sat: 2005-2019 -|
+                                        |- Anderson sat: 2005-19 -|
+                                                     | SPARSE: 2020-2026 |
 ```
 
 **Critical observation:** There is a significant data gap for observation-constrained global OH from 2020 onward.
+
+---
+
+## The Model-Observation Reconciliation (Zhao 2023)
+
+A major advance: Zhao et al. (2023) showed that unconstrained CTMs overestimate global OH by ~20%.
+
+| Metric | Unconstrained Models | Obs-Constrained | Top-Down (MCF) |
+|--------|---------------------|-----------------|----------------|
+| [OH]trop-M (×10⁵) | 9.4–14.4 | ~2×10⁵ lower | ~8–10 |
+| CH₄ loss (Tg/yr) | 577–612 | **471–508** | 459–516 |
+
+**Root causes of model bias:**
+- CO underestimation (especially NH) → too much OH
+- NO₂ overestimation → too much OH production
+- Total ozone column underestimation → too much UV → too much OH
+
+**Implication:** Bottom-up budget estimates need observation-constrained OH fields. Raw model OH should not be used directly.
+
+---
+
+## The Emerging Satellite Era (2023–2024)
+
+Three papers in 2023–2024 mark the beginning of satellite-based OH monitoring:
+
+1. **Anderson et al. (2023):** Proved feasibility — ML + satellite retrievals can estimate tropical column OH
+2. **Souri et al. (2024):** First global 1°×1° TOH trends from satellite data fusion (2005–2019)
+3. **Duncan et al. (2024):** Framework paper arguing MCF is degrading, satellites must replace it
+
+This transition is critical because MCF abundances are approaching detection limits (>90% decline since peak). By ~2030, MCF-based OH constraints will be effectively unusable.
 
 ---
 
