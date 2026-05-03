@@ -84,5 +84,44 @@ From Acquah (2025) references:
 ### Remaining Gaps
 1. **2022–2023:** No OA papers found with fresh global OH/τ quantitative data
 2. **COVID-19 OH impact:** No OA paper found quantifying 2020 global OH anomaly
-3. **Paywalled papers:** 6 critical papers need manual access
+3. **Paywalled papers:** 6 critical papers need manual access (see below)
 4. **Data extraction pending:** 6 papers downloaded but not yet extracted (older CTM studies)
+
+---
+
+## Papers Not Downloaded — Requires Manual Intervention
+
+### Paywalled (no OA version found)
+
+| # | Author(s) | Year | Title | Journal | DOI | Reason | Priority |
+|---|-----------|------|-------|---------|-----|--------|----------|
+| 1 | Rigby, M. et al. | 2017 | Role of OH variability in the stalling of the global atmospheric CH₄ growth rate from 1999 to 2006 | PNAS | `10.1073/pnas.1616426114` | PNAS paywall | **High** — foundational MCF study; large OH IAV claim |
+| 2 | Turner, A.J. et al. | 2017 | Ambiguity in the causes for decadal trends in atmospheric methane | PNAS | `10.1073/pnas.1616020114` | PNAS paywall | **High** — counter-argument to Rigby; independent OH IAV estimate |
+| 3 | Montzka, S.A. et al. | 2011 | Small interannual variability of global atmospheric hydroxyl | Science | `10.1126/science.1197817` | Science paywall | **High** — seminal MCF constraint paper; "small IAV" conclusion |
+| 4 | Prather, M.J. & Zhu, X. | 2024 | [OH and methane lifetime changes] | Science | — (DOI not confirmed) | Science paywall | **High** — most recent high-impact OH study |
+| 5 | Nicely, J.M. et al. | 2018 | Changes in the tropical photochemical environment from 2003 to 2013 | JGR Atmospheres | `10.1029/2018JD028388` | Wiley paywall | **Medium** — quantitative global OH changes from satellite-constrained CTM |
+| 6 | He, J. et al. | 2021 | Methane short-lived climate forcer role: OH response to meteorological forcing | GRL | `10.1029/2021GL094140` | Wiley paywall | **Medium** — OH response to met variability; potential COVID insights |
+
+### Download Blocked (Cloudflare / bot protection)
+
+| # | Author(s) | Year | Title | Journal | DOI | Blocker | Notes |
+|---|-----------|------|-------|---------|-----|---------|-------|
+| 7 | Nicely, J.M. et al. | 2018 | (same as #5 above) | JGR Atmospheres | `10.1029/2018JD028388` | Wiley Cloudflare | Returned 5.5K HTML instead of PDF |
+| 8 | Nguyen, N.H. et al. | 2020 | Chemical feedbacks on the future CH₄ lifetime | GRL | `10.1029/2019GL085706` | Wiley Cloudflare | Returned HTML block page |
+| 9 | He, J. et al. | 2021 | (same as #6 above) | GRL | `10.1029/2021GL094140` | Wiley Cloudflare | Returned HTML block page |
+
+**Note:** Items 7–9 overlap with the paywalled list. Wiley/AGU journals (JGR, GRL) block automated downloads via Cloudflare even for OA articles. Manual browser download may succeed if the paper is actually OA.
+
+### False Positives (wrong paper at URL)
+
+| # | Attempted Target | Actual Paper Found | URL Tried | Action Taken |
+|---|-----------------|-------------------|-----------|-------------|
+| 10 | Patra et al. (2021) TransCom MCF | HTML error page (79K) | `acp.copernicus.org/articles/21/6024/2021/` | Deleted |
+| 11 | Naus et al. (2020) "OH variability" | Droste et al. (2020) — PFC trends | `acp.copernicus.org/articles/20/4787/2020/` | Deleted |
+
+### Summary
+- **Total papers identified:** 28
+- **Successfully downloaded:** 22 (all Copernicus OA journals)
+- **Not downloadable:** 6 (paywall/Cloudflare)
+- **Download success rate:** 79%
+- **Blocker pattern:** All failed downloads are Wiley (AGU) or AAAS (Science/PNAS) journals
