@@ -88,3 +88,22 @@ research-methane-OH/
 *Project created: 2026-05-03*
 *Last updated: 2026-05-03 (Phase 4 — deeper search 2002–2026; 2022–2023 gap filled)*
 *No-Hallucination Policy: All numerical values sourced directly from literature.*
+
+## MinerU PDF Processing
+
+All 45 PDFs were processed through [MinerU](https://mineru.net) cloud API for high-quality markdown extraction.
+
+### Results
+- **39/45 PDFs** successfully converted to markdown → `papers_md/`
+- **6 PDFs** failed MinerU cloud parsing (server-side errors, retried with OCR mode):
+  - Anderson_2021_ACP_6481.pdf
+  - Lelieveld_2016_ACP_12477.pdf
+  - Mertens_2024_ACP_12079.pdf
+  - Voulgarakis_2013_ACP_4839.pdf
+  - Zhao_2019_ACP_13701.pdf
+  - Zhao_2023_ACP_789.pdf
+
+### Processing Script
+See `scripts/mineru_process.py` for the batch processing pipeline.
+
+*MinerU processing completed: 2026-05-04*
